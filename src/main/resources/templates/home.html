@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <title>MyAccount</title>
+    <link href="/static/style3.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="head1">
+    <ul class="menu-main">
+        <li><a class="current">My Account</a></li>
+        <a>IT-Bank</a>
+        <li class="moreletf"><a th:text="${client.getName()}+' '+${client.getSurname()}"></a></li>
+        <li><a th:href="@{/logout}">Logout</a></li>
+    </ul>
+
+    <div class="menuleft">
+        <p><a href="/" th:href="@{/cards}">Cards</a></p>
+        <p>Deposits</p>
+        <p>Operations</p>
+        <p>Currency Rate</p>
+        <p>Recent Payments</p>
+    </div>
+    <div class="bankacc">
+
+        <div><a class="nameofacc" th:text="${client.getBankAccount().getName()}"></a>
+          <img th:src="@{~/static/img/edit.png}" class="imgedit"/>
+        </div>
+
+        <div><img th:src="@{~/static/img/free-icon-bank-account-489943.png}" class="imgacc"/>
+            <img th:src="@{~/static/img/dollar.png}" class="dollar"/>
+            <p class="amountofacc" th:text="${client.getBankAccount().amount}"></p></div>
+    </div>
+    <button type="submit" class="btn" id="btn1">Transfer to card</button>
+    <button type="submit" class="btn" id="btn2">Transfer to deposit</button>
+    <a th:href="@{'/transfer/card/  '+${client.getBankAccount().getId()}}" class="btn" id="btn3">Recent Translations</a>
+
+
+
+
+</div>
+</body>
+</html>

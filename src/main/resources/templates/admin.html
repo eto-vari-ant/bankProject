@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <title>List of clients</title>
+    <link href="/static/style2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="head1">
+<h1 class="listcl">List of clients</h1>
+<table class="table" >
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Email</th>
+        <th>Date of birth</th>
+        <th>PIN</th>
+        <th>Activate</th>
+        <th>Make an admin</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="client: ${clients}">
+        <td th:text="${client.id}"></td>
+        <td th:text="${client.name}"></td>
+        <td th:text="${client.surname}"></td>
+        <td th:text="${client.email}"></td>
+        <td th:text="${client.birthDate}"></td>
+        <td th:text="${client.passportInfo}"></td>
+        <td>
+            <div th:switch="${client.isActive}">
+                <span th:case="'0'">
+                <form th:action="@{'/admin/activate/'+${client.id}}" method="post">
+                    <button type="submit" class="btn">Activate</button>
+                </form>
+
+                </span>
+                <span th:case="'1'" class="greenstr" >Client is active</span>
+            </div>
+        </td>
+        <td th:switch="${#lists.size(client.roles)}">
+            <span th:case="'1'">
+                <form th:action="@{'/admin/manage/'+${client.id}}" method="post">
+                    <button type="submit" class="btn">Make an admin</button>
+            </form></span>
+            <span th:case="'2'"><a class="greenstr">Client is an Admin</a></span>
+        </td>
+        <!--<td th:switch="${#sets.contains(client.roles,'ROLE_ADMIN')}">
+            <span th:case="${false}">Make client an admin</span>
+            <span th:case="${true}">Client is an Admin</span>
+        </td>-->
+        <td>
+            <form th:action="@{'/admin/delete/'+${client.id}}" method="post">
+            <button type="submit" class="btn">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>

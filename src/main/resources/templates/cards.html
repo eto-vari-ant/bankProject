@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <title>MyCards</title>
+    <link href="/static/style4.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="head1">
+    <div>
+            <a type="submit" class="suit_and_tie" th:href="@{/cards/add}">Add new card</a>
+
+            <a  class="suit_and_tie1" th:href="@{/home}">Home Page</a>
+
+    </div>
+    <div сlass="cardslist">
+    <span th:if="${#lists.isEmpty(cards)}" class="emptycard">Sorry, you have no cards!</span>
+    <span th:unless="${#lists.isEmpty(cards)}">
+        <table class="table">
+            <tr>
+                <th> </th>
+                <th class="margtop"></th>
+                <th class="margtop"></th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+            </tr>
+            <tr th:each="card: ${cards}">
+                <td> <img th:src="@{~/static/img/businesspaymentcard_paymentcard_visa_negocio_pag_2339.png}"/></td>
+                <td th:text="${card.name}" class="txtfield"></td>
+                <td th:text="'$'+${card.amount}" class="txtfield"></td>
+                <td>
+                    <a th:switch="${card.isActive}">
+                <span th:case="'1'">
+                <form th:action="@{'/cards/disactivate/'+${card.id}}" method="post">
+                    <button type="submit" class="btndis">Disactivate</button>
+                </form>
+
+                </span>
+                <span th:case="'0'" class="disactivated">Disactivated</span>
+            </a>
+                </td>
+                <td>
+                    <a th:href="@{'/cards/edit/  '+${card.id}}" class="btninfo">Info</a>
+                </td>
+                <td>
+                    <a th:switch="${card.isActive}">
+                <span th:case="'0'">
+               <form th:action="@{'/cards/delete/'+${card.id}}" method="post">
+                    <button type="submit" class="btndelete">Delete</button>
+                    </form>
+                </span>
+                    </a>
+
+                </td>
+            </tr>
+        </table>
+
+    </span>
+    </div>
+</div>
+</body>
+</html>

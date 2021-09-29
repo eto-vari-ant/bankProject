@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <title>MyCards</title>
+    <link href="/static/style5.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="head1">
+    <a  class="suit_and_tie1" th:href="@{/cards}">Cards Page</a>
+    <a class="onlyname"> You can edit only the name of your card!</a>
+
+    <form action="#"
+          th:action="@{/cards/update/{id}(id=${card.id})}"
+          th:object="${card}"
+          method="post" class="form-style-4">
+        <label for="name"><span>Name of Card </span>
+        <input type="text" th:field="*{name}" id="name">
+        </label>
+
+        <label for="number"><span>Number</span>
+            <a th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="err">Error</a>
+        <input type="text" th:field="*{number}" id="number" placeholder="*{number}" readonly = "readonly">
+        </label>
+        <label for="cvv"><span>CVV</span>
+        <input type="text" th:field="*{cvv}" id="cvv" placeholder="*{cvv}" readonly = "readonly">
+        </label>
+        <label for="validityPeriod"><span>Period of Validity</span>
+        <input type="text" th:field="*{validityPeriod}" id="validityPeriod" placeholder="*{validityPeriod}" readonly = "readonly">
+        </label>
+        <label for="amount"><span>Amount($)</span>
+        <input type="text" th:field="*{amount}" id="amount" placeholder="*{amount}" readonly = "readonly">
+        </label>
+        <span></span>
+        <input type="submit" value="Change the name of card">
+    </form>
+
+</div>
+</body>
+</html>

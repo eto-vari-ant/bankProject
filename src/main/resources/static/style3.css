@@ -1,0 +1,262 @@
+body {
+    background-image: url("img/1621689241_25-phonoteka_org-p-fon-dlya-prezentatsii-gadzheti-27.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    max-height: max-content;
+    background-attachment: fixed;
+}
+
+.head1 {
+    background: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    max-height: max-content;
+}
+
+.menu-main {
+    padding-bottom: 5px;
+    margin-top: 0px;
+    padding-top: 25px;
+    list-style: none;
+    text-align: center;
+    background: white;
+}
+
+.menu-main li {
+    display: inline-block;
+}
+
+.menu-main li:after {
+    content: "|";
+    color: #606060;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu-main li:last-child:after {
+    content: none;
+}
+
+.menu-main a {
+    text-decoration: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+
+.menu-main a, .menu-main a:visited {
+    color: #9d999d;
+}
+
+.menu-main a.current, .menu-main a:hover {
+    color: #457d93;
+}
+
+.menu-main a:before,
+.menu-main a:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    left: 50%;
+    background: #457d93;
+    transition: .8s;
+}
+
+.menu-main a:hover:before, .menu-main .current:before {
+    left: 0;
+}
+
+.menu-main a:hover:after, .menu-main .current:after {
+    right: 0;
+}
+
+@media (max-width: 550px) {
+    .menu-main {
+        padding-top: 0;
+    }
+
+    .menu-main li {
+        display: block;
+    }
+
+    .menu-main li:after {
+        content: none;
+    }
+
+    .menu-main a {
+        padding: 25px 0 20px;
+        margin: 0 30px;
+    }
+}
+
+.moreletf {
+    margin-left: 300px;
+}
+
+.current {
+    margin-left: -100px;
+}
+
+.bankacc {
+    position: absolute;
+    margin-top: 190px;
+    margin-left: 500px;
+    height: 30%;
+    width: 33%;
+    background-color: rgba(181, 206, 222, 0.64);
+    border: 6px solid #5c6678;
+    border-radius: 20px;
+}
+
+.nameofacc {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 190px;
+    font-size: 28px;
+
+}
+
+.imgedit {
+    margin-top: 5px;
+    margin-left: 15px;
+    height: 34px;
+    width: 34px;
+}
+
+.imgacc {
+    margin-top: 10px;
+    margin-left: 43px;
+    height: 130px;
+    width: 130px;
+}
+
+.dollar {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+.amountofacc {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-style: italic;
+    text-decoration: underline;
+    color: #151414;
+    margin-top: -90px;
+    margin-left: 320px;
+    font-size: 60px;
+}
+
+.menuleft {
+    height: 1080px;
+    width: 300px;
+    margin-top: -17px;
+    margin-left: 0px;
+    background: rgba(255, 255, 255, 0.71);
+    position: absolute;
+}
+
+.btn {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 15px 15px 0;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #444;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    transition: box-shadow 0.2s;
+}
+
+.btn:focus-visible {
+    border: 1px solid #4c51f9;
+    outline: none;
+}
+
+.btn:hover {
+    transition: all 0.2s;
+    box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+}
+
+.btn:active {
+    background-color: #808080;
+}
+
+.btn:disabled {
+    background-color: #eee;
+    border-color: #eee;
+    color: #444;
+    cursor: not-allowed;
+}
+#btn1{
+    width: 180px;
+    position: absolute;
+    margin-left: 1030px;
+    margin-top: 370px;
+}
+#btn2{
+    width: 180px;
+    position: absolute;
+    margin-left: 1030px;
+    margin-top: 300px;
+}
+#btn3{
+    width: 180px;
+    position: absolute;
+    margin-left: 1030px;
+    margin-top: 230px;
+}
+.menuleft p{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #000000;
+    margin-left: 20px;
+}
+.menuleft a{
+    text-decoration: none;
+    color: #000000;
+}
+.menuleft a:hover {
+    color: rgba(19, 19, 19, 0.93);
+    text-decoration: underline;
+}
+.menuleft a:visited {
+    text-decoration: underline;
+    color: rgba(19, 19, 19, 0.93);
+}

@@ -1,0 +1,204 @@
+span{
+    color: red;
+}
+body{
+    background-image: url("img/1621518322_19-phonoteka_org-p-fon-dlya-prezentatsii-po-finansam-20.jpg");
+    background-repeat: no-repeat;
+    background-size:cover ;
+    min-height: 100%;
+    max-height: max-content;
+    background-attachment: fixed;
+
+}
+.head1{
+    background: rgba(255,255,255,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    max-height: max-content;
+}
+.head176{
+    background: rgba(255,255,255,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130%;
+}
+
+.head2{
+    background: rgba(101,124,148,0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+}
+.img1{
+    position: fixed;
+    margin-left: 30px;
+    margin-top:20px;
+    height: 70px;
+    weight:70px;
+
+}
+
+.head3{
+    position: fixed;
+    margin-left: 120px;
+    margin-top: 35px;
+    height: 60px;
+    width:300px;
+    font-weight: bold;
+    font-size: 52px;
+    font-style: revert;
+    font-family: Bebas Neue;
+    color: #414850;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    text-shadow:
+            3px 3px 0px #d5d5d5,
+            5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.head4{
+
+
+    margin-right: 30px;
+    font-size: 20px;
+    color: rgba(46, 86, 134, 0.85);
+    text-align: center;
+    font-family: "Times New Roman";
+
+}
+
+.head8 {
+    color: #174461;
+    font-style: italic;
+    padding-left: 5px;
+    text-decoration: underline;
+    font-size: 20px;
+    padding-top: 300px;
+    padding-bottom: 30px;
+    height: 10%;
+}
+.head8:hover {
+    color: #1f5066;
+}
+.head9{
+    padding-left: 170px;
+    font-size: 20px;
+    color: #041518;
+    font-style: italic;
+}
+
+.text-field__label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+
+/* стили для input */
+.text-field__input {
+    margin-left: 28px;
+    display: block;
+    width: 85%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin-right: 20px;
+
+}
+.floating-button {
+    text-decoration: none;
+    display: inline-block;
+    width: 200px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 10px 20px;
+    margin-left: 165px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #c4c4c4;
+    background: rgba(67, 102, 111, 0.72);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+    transition: .3s;
+    text-decoration-color: #bdbdbd;
+}
+
+
+
+
+.formblok{
+    background-color: rgba(181, 206, 222, 0.64);
+    border: 6px solid #5c6678;
+    border-radius: 25px;
+    height: 54%;
+    width: 35%;
+    padding-bottom: 50px;
+    margin-top:200px ;
+    margin-left: 500px;
+    justify-content: center;
+    align-items: center;
+}
+.teleph{
+    margin-left: 1400px;
+}
+.blokform2{
+    background-color: rgba(181, 206, 222, 0.64);
+    border: 6px solid #5c6678;
+    border-radius: 25px;
+    height: auto;
+    width: 35%;
+    margin-top:140px ;
+    margin-left: 500px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+
+}
+.head11{
+
+    font-size: 20px;
+    padding-left: 130px;
+    color: #041518;
+    font-style: italic;
+}
+.head20 {
+    height: 10%;
+    padding-left: 500px;
+}
+.alert{
+    margin-left: 30px;
+    color: rgba(175, 12, 32, 0.94);
+    font-size: 16px;
+}
+
+.smallerr{
+    margin-left: 33px;
+    color: rgba(175, 12, 32, 0.94);
+}
+.head17{
+    margin-right: 30px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgba(46, 86, 134, 0.85);
+    text-align: center;
+    font-family: "Times New Roman";
+}

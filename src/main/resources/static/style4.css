@@ -1,0 +1,169 @@
+body {
+    background-image: url("img/1621689241_25-phonoteka_org-p-fon-dlya-prezentatsii-gadzheti-27.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    max-height: max-content;
+    background-attachment: fixed;
+}
+
+.head1 {
+    background: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    max-height: max-content;
+}
+.suit_and_tie1 {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 1200px;
+    color: rgba(169, 210, 253, 0.89);
+    font-size: 20px;
+    font-family: helvetica;
+    text-decoration: none;
+    border: 2px solid rgba(169, 210, 253, 0.89);
+    border-radius: 20px;
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    background-color: #204878;
+    padding: 4px 30px;
+}
+
+.suit_and_tie1:hover {
+    color: #204878;
+    background-color: rgba(169, 210, 253, 0.89);
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+}
+.suit_and_tie {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 70px;
+    color: rgba(169, 210, 253, 0.89);
+    font-size: 20px;
+    font-family: helvetica;
+    text-decoration: none;
+    border: 2px solid rgba(169, 210, 253, 0.89);
+    border-radius: 20px;
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    background-color: #204878;
+    padding: 4px 30px;
+    margin-bottom: 200px;
+}
+
+.suit_and_tie:hover {
+    color: #204878;
+    background-color: rgba(169, 210, 253, 0.89);
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+}
+.cardslist{
+    margin-left: 70px;
+    margin-top: 400px;
+}
+.txtfield{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+.btndis{
+    position: absolute;
+    color: rgba(229, 37, 37, 0.89);
+    font-size: 20px;
+    font-family: helvetica;
+    text-decoration: none;
+    border: 2px solid rgba(229, 37, 37, 0.89);
+    border-radius: 20px;
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    background-color: #630916;
+    padding: 4px 30px;
+    margin-top: -20px;
+    margin-left: 30px;
+}
+.btndis:hover{
+    color: #630916;
+    background-color: rgba(229, 37, 37, 0.89);
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+}
+.btninfo{
+    margin-top: -20px;
+    position: absolute;
+    color: rgba(169, 210, 253, 0.89);
+    font-size: 20px;
+    font-family: helvetica;
+    text-decoration: none;
+    border: 2px solid rgba(169, 210, 253, 0.89);
+    border-radius: 20px;
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    background-color: #204878;
+    padding: 4px 30px;
+    margin-left: 200px;
+
+}
+.btninfo:hover{
+    color: #204878;
+    background-color: rgba(169, 210, 253, 0.89);
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+}
+.txtfield{
+    margin-top: 50px;
+    padding-left: 50px;
+}
+.table{
+    margin-top: 80px;
+    margin-left: 40px;
+}
+.margtop{
+    margin-top: 50px;
+}
+.btndelete{
+    position: absolute;
+    color: rgba(229, 37, 37, 0.89);
+    font-size: 20px;
+    font-family: helvetica;
+    text-decoration: none;
+    border: 2px solid rgba(229, 37, 37, 0.89);
+    border-radius: 20px;
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    background-color: #630916;
+    padding: 4px 30px;
+    margin-top: -20px;
+}
+.btndelete:hover{
+    color: #630916;
+    background-color: rgba(229, 37, 37, 0.89);
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+}
+.emptycard{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 80px;
+    font-size: 28px;
+    color: #8e090d;
+}
+.disactivated{
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 25px;
+    color: #8e090d;
+}

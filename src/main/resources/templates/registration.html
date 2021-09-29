@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <link href="/static/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="head176">
+    <div class="head2">
+        <img th:src="@{~/static/img/488313.png}" class="img1"/>
+        <h3 class="head3">IT-Bank</h3>
+    </div>
+    <div class="teleph"><img th:src="@{~/static/img/telephone.png}" class="img1"/></div>
+    <div class="blokform2">
+        <div class="head17">Registration</div>
+        <form th:action="@{/registration}" th:object="${newClient}" method="post">
+            <div>
+
+                <div class="text-field__label"><label for="name"></label>
+                    <input id="name" th:field="*{name}" class="text-field__input" placeholder="First name"/></div>
+                    <div class="smallerr"><td th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></td></div>
+
+                <div class="text-field__label"><label for="surname"></label>
+
+                    <input id="surname" th:field="*{surname}" class="text-field__input" placeholder="Surname"/></div>
+                <div class="smallerr"><td th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}"></td></div>
+                <div class="text-field__label"><label for="email"></label>
+
+                    <input id="email" th:field="*{email}" class="text-field__input" placeholder="Email"/></div>
+                <div class="smallerr"><td th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></td></div>
+                <div class="text-field__label"><label for="password"></label>
+
+                    <input id="password" th:field="*{password}" class="text-field__input" placeholder="Password"
+                           th:type="password"/></div>
+                <div class="smallerr"><td th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></td></div>
+                <div class="text-field__label"><label for="passwordConfirm"></label>
+                    <input id="passwordConfirm" th:field="*{passwordConfirm}" class="text-field__input"
+                           placeholder="Repeat Password" th:type="password"/></div>
+                <div class="text-field__label"><label for="birthDate"></label>
+                    <input id="birthDate" th:field="*{birthDate}" type="date" class="text-field__input"
+                           placeholder="Date of Birth"/></div>
+                <div class="text-field__label"><label for="passportInfo"></label>
+                    <input id="passportInfo" th:field="*{passportInfo}" class="text-field__input"
+                           placeholder="Passport Identification Number"/></div>
+                <div class="smallerr"><td th:if="${#fields.hasErrors('passportInfo')}" th:errors="*{passportInfo}"></td></div>
+                <div>
+                    <div class="smallerr"><td th:if="${passwordError}" th:text="${passwordError}">/td></div>
+                    <div class="smallerr"><td th:if="${passInfError}" th:text="${passInfError}">/td></div>
+                    <div class="smallerr"><td th:if="${emailError}" th:text="${emailError}">/td></div>
+                </div>
+                <div class="text-field__label">
+                    <button type="submit" class="floating-button">Register</button>
+                </div>
+                <span><a class="head11">Already registered? </a><a href="/" th:href="@{/login}"
+                                                                   class="head8">Login here</a></span>
+            </div>
+        </form>
+    </div>
+</div>
+<h1></h1>
+<h1></h1>
+</body>
+</html>

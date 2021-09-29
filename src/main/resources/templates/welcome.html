@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome!</title>
+    <link href="/static/style2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="head1">
+    <div class="head2">
+        <img th:src="@{~/static/img/488313.png}" class="img1"/>
+        <h3 class="head3">IT-Bank</h3>
+    </div>
+    <div class="teleph"><img th:src="@{~/static/img/telephone.png}" class="img1"/></div>
+
+    <div class="welcomeForm">
+        <div class="forlines">
+        <a class="line1">Thanks for registration, dear client of our bank.</a>
+        <a class="line2">Please wait till our moderators check your completed data and activate your account.</a>
+        </div>
+    </div>
+    <a href="/" th:href="@{/login}"
+       class="head111">Login page</a>
+</div>
+</body>
+</html>

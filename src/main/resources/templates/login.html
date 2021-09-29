@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link href="/static/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="head1">
+    <div class="head2">
+        <img th:src="@{~/static/img/488313.png}" class="img1"/>
+        <h3 class="head3">IT-Bank</h3>
+    </div>
+    <div class="teleph"><img th:src="@{~/static/img/telephone.png}" class="img1"/></div>
+    <div class="formblok">
+        <div class="head4"><h1>Login</h1></div>
+        <form th:action="@{/login}" method="post">
+            <div class="head5"><label for="email" class="text-field__label"></label>
+                <input type="text" id="email" name="email" autofocus="autofocus" placeholder="Email"
+                       class="text-field__input"/></div>
+            <div class="head6"><label for="password" class="text-field__label"></label>
+                <input type="password" id="password" name="password" autofocus="autofocus" placeholder="Password"
+                       class="text-field__input"/></div>
+            <br/>
+            <div class="alert" th:if="${error}" th:text="${error}"></div>
+            <div class="head7"><input type="submit" value="Log In" class="floating-button"/></div>
+
+
+        </form>
+
+        <span><a class="head9">New client? </a><a href="/" th:href="@{/registration}"
+                                                  class="head8">Register here</a></span>
+    </div>
+
+</div>
+
+</body>
+</html>
